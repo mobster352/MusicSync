@@ -4,7 +4,7 @@
   "private": true,
   "license": "UNLICENSED",
   "devDependencies": {
-    "@fitbit/sdk": "~6.1.0",
+    "@fitbit/sdk": "^5.0.1",
     "@fitbit/sdk-cli": "^1.7.3"
   },
   "fitbit": {
@@ -13,7 +13,10 @@
     "appDisplayName": "Music Sync",
     "iconFile": "resources/icon.png",
     "wipeColor": "#ffffff",
-    "requestedPermissions": [],
+    "requestedPermissions": [
+      "access_heart_rate",
+      "access_internet"
+    ],
     "buildTargets": [
       "atlas",
       "vulcan"
@@ -24,5 +27,8 @@
   "scripts": {
     "build": "fitbit-build",
     "debug": "fitbit"
+  },
+  "dependencies": {
+    "typescript": "^5.1.6"
   }
 }
